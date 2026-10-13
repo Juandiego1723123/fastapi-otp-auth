@@ -74,10 +74,8 @@ pytest
 
 ## Despliegue
 
-Comando de inicio en el servidor:
+Desplegado en **PythonAnywhere** (plan gratuito, permite SMTP con Gmail).
 
-```bash
-uvicorn app.main:app --host 0.0.0.0 --port $PORT
-```
-
-Las variables del `.env` se configuran en el panel del hosting.
+- `wsgi.py` adapta la app ASGI de FastAPI a WSGI con `a2wsgi`, que es el formato que usa PythonAnywhere.
+- Las variables de entorno se configuran en el archivo `.env` del servidor.
+- Para correr en local se usa Uvicorn: `uvicorn app.main:app --reload`.
