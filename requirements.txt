@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic[email]
+pyotp
+bcrypt
+pyjwt
+slowapi
+python-dotenv
+pytest
+httpx
